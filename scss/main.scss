@@ -414,6 +414,11 @@ $nav-btn: #FF4820;
     font-weight: 700;
     line-height: 34.947px;
   }
+
+  img {
+    height: 130px;
+    width: 100%;
+  }
 }
 
 .blog__date {
@@ -434,6 +439,10 @@ $nav-btn: #FF4820;
   grid-row-start: span 2;
   align-items: stretch;
   width: 416px;
+
+  img {
+    height: 100%;
+  }
 }
 
 /*------- Main -------*/

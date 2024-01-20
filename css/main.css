@@ -449,6 +449,10 @@
   font-weight: 700;
   line-height: 34.947px;
 }
+.blog__item img {
+  height: 130px;
+  width: 100%;
+}
 
 .blog__date {
   color: #FFF;
@@ -470,6 +474,9 @@
       -ms-flex-align: stretch;
           align-items: stretch;
   width: 416px;
+}
+.blog__item:first-of-type img {
+  height: 100%;
 }
 
 /*------- Main -------*/
