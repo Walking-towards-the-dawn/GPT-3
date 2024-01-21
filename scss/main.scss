@@ -1,5 +1,6 @@
 @import url('../css/reset.css');
 @import url('../variables.scss');
+@import url('../css/media.css');
 
 /*------- Variables -------*/
 $nav-btn: #FF4820;
@@ -191,6 +192,8 @@ $nav-btn: #FF4820;
   &__item {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
   &__sub-items {
@@ -227,6 +230,8 @@ $nav-btn: #FF4820;
     justify-content: space-between;
     align-items: center;
     margin: 90px 0;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
   &__main-title {
@@ -396,8 +401,9 @@ $nav-btn: #FF4820;
 
 .blog__items {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 0));
+  justify-content: center;
 }
 
 .blog__item {
@@ -438,7 +444,6 @@ $nav-btn: #FF4820;
   display: grid;
   grid-row-start: span 2;
   align-items: stretch;
-  width: 416px;
 
   img {
     height: 100%;
@@ -449,7 +454,101 @@ $nav-btn: #FF4820;
 
 /*------- Footer -------*/
 .footer {
+  padding-top: 175px;
   margin-top: 155px;
+  background: #031B34;
+
+  &__title {
+    margin: 0 auto;
+    max-width: 820px;
+    text-align: center;
+  }
+
+  &__btn {
+    padding: 20px 24px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    border: 1px solid #FFF;
+    cursor: pointer;
+  }
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.footer__menu {
+  margin-top: 180px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  &-item {
+    color: #fff;
+  }
+}
+
+.footer__logo {
+
+  img {
+    height: 30px;
+    margin-bottom: 25px;
+  }
+
+  &-text {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    max-width: 170px;
+  }
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.footer__menu-title {
+  font-weight: 700;
+}
+
+.footer__copy {
+  margin-top: 82px;
+  padding-bottom: 26px;
+  text-align: center;
+  color: #FFF;
+  font-feature-settings: 'liga' off;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 /*------- Footer -------*/
+
+
+/*------- Media -------*/
+
+/* ------- Header ------- */
+/* ------- Header ------- */
+
+/* ------- Main ------- */
+@media (max-width: 1100px) {
+  .register__container-inner {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+/* ------- Main ------- */
+
+/* ------- Footer ------- */
+/* ------- Footer ------- */
+
+/*------- Media -------*/
